@@ -1,0 +1,13 @@
+import "dotenv/config";
+import express from "express";
+import { indexHandler } from "./handler/indexhandler";
+
+const app = express();
+
+const port = process.env.PORT || 3030;
+
+app.get("/", indexHandler);
+
+app.listen(port, () => {
+  console.log(`server running on port:${port}`);
+});
