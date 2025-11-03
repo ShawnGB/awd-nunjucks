@@ -12,6 +12,9 @@ nunjucks.configure("src/templates", {
   express: app,
 });
 app.set("view engine", "njk");
+
+app.use(express.static("src/public"));
+
 app.get("/", indexHandler);
 
 app.listen(port, () => {

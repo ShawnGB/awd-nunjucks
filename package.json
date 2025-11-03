@@ -24,7 +24,8 @@
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
     "nunjucks": "^3.2.4",
-    "randomcolor": "^0.6.2"
+    "randomcolor": "^0.6.2",
+    "startbootstrap-clean-blog": "^6.0.9"
   },
   "devDependencies": {
     "@types/express": "^5.0.5",
