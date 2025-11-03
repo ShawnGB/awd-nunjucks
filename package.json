@@ -20,8 +20,10 @@
     "dev": "nodemon"
   },
   "dependencies": {
+    "@types/nunjucks": "^3.2.6",
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
+    "nunjucks": "^3.2.4",
     "randomcolor": "^0.6.2"
   },
   "devDependencies": {
