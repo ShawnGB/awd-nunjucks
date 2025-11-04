@@ -13,4 +13,9 @@ const indexHandler = (req: Request, res: Response) => {
 
   res.render("blog/blogpost.njk", { post });
 };
-export { indexHandler };
+
+const contactHandler = (req: Request, res: Response) => {
+  res.render("contact.njk");
+};
+
+export { indexHandler, contactHandler };

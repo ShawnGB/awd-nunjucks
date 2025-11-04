@@ -1,6 +1,6 @@
 import "dotenv/config";
 import express from "express";
-import { indexHandler } from "./handler/indexhandler";
+import { indexHandler, contactHandler } from "./handler/handlers";
 import nunjucks from "nunjucks";
 
 const app = express();
@@ -15,6 +15,7 @@ app.set("view engine", "njk");
 
 app.use(express.static("src/public"));
 
+app.get("/contact", contactHandler);
 app.get("/{:id}", indexHandler);
 
 app.listen(port, () => {
