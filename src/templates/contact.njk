@@ -1,9 +1,10 @@
-{% extends "base.njk" %}
-{% import "macros/forms.njk" as forms %}
-
-{% block content %}
+{% extends "base.njk" %} {% import "macros/forms.njk" as forms %} {% block
+content %}
 <!-- Page Header-->
-<header class="masthead" style="background-image: url('/assets/img/contact-bg.jpg')">
+<header
+  class="masthead"
+  style="background-image: url(&quot;/images/contact-bg.jpg&quot;)"
+>
   <div class="container position-relative px-4 px-lg-5">
     <div class="row gx-4 gx-lg-5 justify-content-center">
       <div class="col-md-10 col-lg-8 col-xl-7">
@@ -21,15 +22,25 @@
   <div class="container px-4 px-lg-5">
     <div class="row gx-4 gx-lg-5 justify-content-center">
       <div class="col-md-10 col-lg-8 col-xl-7">
-        <p>Want to get in touch? Fill out the form below to send me a message and I will get back to you as soon as possible!</p>
+        <p>
+          Want to get in touch? Fill out the form below to send me a message and
+          I will get back to you as soon as possible!
+        </p>
         <div class="my-5">
           <form id="contactForm">
-            {{ forms.input("name", "text", "Name", "Enter your name...") }}
-            {{ forms.input("email", "email", "Email address", "Enter your email...") }}
-            {{ forms.input("phone", "tel", "Phone Number", "Enter your phone number...") }}
-            {{ forms.textarea("message", "Message", "Enter your message here...") }}
+            {{ forms.input("name", "text", "Name", "Enter your name...") }} {{
+            forms.input("email", "email", "Email address", "Enter your
+            email...") }} {{ forms.input("phone", "tel", "Phone Number", "Enter
+            your phone number...") }} {{ forms.textarea("message", "Message",
+            "Enter your message here...") }}
             <br />
-            <button class="btn btn-primary text-uppercase" id="submitButton" type="submit">Send</button>
+            <button
+              class="btn btn-primary text-uppercase"
+              id="submitButton"
+              type="submit"
+            >
+              Send
+            </button>
           </form>
         </div>
       </div>
