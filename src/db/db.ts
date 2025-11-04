@@ -1,25 +1,26 @@
 import data from "./data.json";
+import dayjs from "dayjs";
 
 interface Post {
   title: string;
   image: string;
   author: string;
-  createdAt: number | Date;
+  createdAt: number;
   teaser: string;
   content: string;
 }
 
-const getPosts = (): Post[] => {
-  const posts = data.map((post: Post) => {
+const getPosts = (): (Omit<Post, "createdAt"> & {
+  createdAt: string;
+  id: string;
+})[] => {
+  return data.map((post: Post, index: number) => {
     return {
       ...post,
-      createdAt: new Date(post.createdAt),
+      createdAt: dayjs.unix(post.createdAt).format("MMMM DD, YYYY") as string,
+      id: (index + 1).toString(),
     };
   });
-
-  if (!posts) return [];
-
-  return posts;
 };
 
 export { getPosts };

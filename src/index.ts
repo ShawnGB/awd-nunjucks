@@ -15,7 +15,7 @@ app.set("view engine", "njk");
 
 app.use(express.static("src/public"));
 
-app.get("/", indexHandler);
+app.get("/{:id}", indexHandler);
 
 app.listen(port, () => {
   console.log(`server running on port:${port}`);
